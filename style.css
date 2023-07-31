@@ -1,0 +1,72 @@
+html {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+    font-family: sans-serif;
+}
+
+#board tr {
+    display: block;
+    margin-bottom: 2px;
+}
+
+.cell {
+    width: 40px;
+    height: 40px;
+    overflow: hidden;
+    display: inline-block;
+    margin-right: 2px;
+    border-radius: 2px;
+    background-color: #ebebeb;
+}
+
+#board .cell {
+    background-color: #E3F2FD;
+}
+
+#board .cell.disabled {
+    background-color: #f7f7f7;
+}
+
+#board .cell:not(.disabled):hover {
+    background-color: #BBDEFB;
+}
+
+#players {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.player {
+    margin-bottom: 10px;
+    width: fit-content;
+    padding: 10px;
+}
+
+.player.active {
+    outline: 2px solid #2196F3;
+    border-radius: 5px;
+}
+
+.player .cell img {
+    opacity: 0.6;
+}
+
+.player.active .cell img {
+    opacity: 1;
+}
+
+.player.active:hover .cell img {
+    opacity: 0.6;
+}
+
+.player.active:hover .cell img:hover {
+    opacity: 1;
+}
+
+.player .cell.selected  {
+    outline: 2px solid #2196F3;
+}
